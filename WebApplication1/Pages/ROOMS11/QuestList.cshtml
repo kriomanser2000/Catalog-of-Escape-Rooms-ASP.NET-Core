@@ -1,0 +1,123 @@
+﻿@page
+@model WebApplication1.Pages.ROOMS11.QuestListModel
+@{
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room Kryvyi Rih | Catalog of Escape Rooms | Quest Rooms List</title>
+</head>
+<style>
+.table11 
+{
+    color: azure;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #333;
+}
+.table11 th, .table11 td 
+{
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.table11 th 
+{
+    background-color: #555;
+    color: white;
+}
+.Btn11
+{
+    color: whitesmoke;
+    background: #555;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 24px;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+.Btn22
+{
+    color: whitesmoke;
+    background: #555;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 24px;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+.Btn33
+{
+    color: whitesmoke;
+    background: #555;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 24px;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+</style>
+<body>
+    <div>
+        <a asp-page="/ROOMS11/CreateRooms" class="btn btn-primary btn-sm Btn11">New Room</a>
+        <table class="table11">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>About</th>
+                    <th>TimeLimit</th>
+                    <th>GroupSizeMin</th>
+                    <th>GroupSizeMax</th>
+                    <th>MinAge</th>
+                    <th>Address</th>
+                    <th>PhoneNum</th>
+                    <th>Email</th>
+                    <th>CompanyName</th>
+                    <th>Rate</th>
+                    <th>FearLvl</th>
+                    <th>Difficult</th>
+                    <th>GalleryImage</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var rooms in Model.listRooms)
+                {
+                    <tr>
+                        <td>@rooms.Id</td>
+                        <td>@rooms.Name</td>
+                        <td>@rooms.About</td>
+                        <td>@rooms.TimeLimit</td>
+                        <td>@rooms.GroupSizeMin</td>
+                        <td>@rooms.GroupSizeMax</td>
+                        <td>@rooms.MinAge</td>
+                        <td>@rooms.Address</td>
+                        <td>@rooms.PhoneNum</td>
+                        <td>@rooms.Email</td>
+                        <td>@rooms.CompanyName</td>
+                        <td>@rooms.Rate</td>
+                        <td>@rooms.FearLvl</td>
+                        <td>@rooms.Difficult</td>
+                        <td>@rooms.GalleryImg</td>
+                        <td>
+                            <a class="btn btn-primary btn-sm Btn22" href="/Rooms/Edit?Id=@rooms.Id">Edit</a>
+                            <a class="btn btn-danger btn-sm Btn33" href="/Rooms/Delete?Id=@rooms.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

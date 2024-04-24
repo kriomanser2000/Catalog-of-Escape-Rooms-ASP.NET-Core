@@ -22,4 +22,8 @@
     <None Include="Pages\main1.cshtml" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+  </ItemGroup>
+
 </Project>

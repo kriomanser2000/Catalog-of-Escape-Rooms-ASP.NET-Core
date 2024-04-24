@@ -15,7 +15,6 @@
 body
 {
     background: black;
-    overflow-y: scroll;
 }
 .mainImg
 {
@@ -335,35 +334,24 @@ body
     <!-- HEADER -->
     <div class="header1">
         <a href="main.html">
-            <img class="mainImg" style="width: 200px;" src="<img src=" d:\progs\microsoft visual studio community projects\webapplication1\webapplication1\images\catalog of escape rooms.png" />" alt="Catalog of Escape Rooms">
+            <img class="mainImg" style="width: 200px;" src=";\images\catalog of escape rooms.png" alt="Catalog of Escape Rooms">
         </a>
         <select class="BookNowMain" id="myBookNowMain">
             <option value="" disabled selected>BOOK NOW</option>
-            <option value="lous">St. LOUIS LOCATION</option>
-            <option value="charles">St. CHARLES LOCATION</option>
-            <option value="private">PRIVATE ESCAPE ROOMS</option>
+            <option value="kr1">Kryvyi Rih 1</option>
+            <option value="kr2">Kryvyi Rih 2</option>
+            <option value="prvt">PRIVATE ESCAPE ROOMS</option>
         </select>
         <select class="EscapeRoomsMain" id="myEscapeRoomsMain">
             <option value="" disabled selected>ESCAPE ROOMS</option>
-            <option value="secSoc">SECRET SOCIETY</option>
-            <option value="taken">TAKEN</option>
-            <option value="staScare">STADIUM SCARE</option>
-            <option value="cursCast">CURSED CASTLE</option>
-            <option value="shed">THE SHED</option>
-            <option value="dnncWrksp">DAVINCI`S WORKSHOP</option>
-            <option value="diamonHeist">DIAMOND HEIST</option>
-            <option value="creepyLair">CREEPY LAIR</option>
-            <option value="MerryGrinch">MERRY GRINCHMAS</option>
-            <option value="homeAlone">HOME ALONE</option>
-            <option value="elfEsc">ELF ESCAPE</option>
-            <option value="chrmsEscRoom">CHRISTMAS ESACPE ROOMS</option>
+            <!-- Rooms Here -->
         </select>
         <select class="GroupsMain" id="myGroupsMain">
             <option value="" disabled selected>GROUPS</option>
             <option value="gsPT">GROUPS & PARTIES</option>
             <option value="tmBG">TEAM BUILDING</option>
         </select>
-        <a href="blog.html" class="oth1">BLOG</a>
+        <a asp-page="/ROOMS11/QuestList" class="oth1">QUEST ROOM LIST</a>
         <a href="faq.html" class="oth2">FAQ & PARKING</a>
         <a href="gift.html" class="oth3">GIFT CARDS</a>
         <a href="contact.html" class="oth4">CONTACT US</a>
@@ -373,22 +361,12 @@ body
     <h1 class="txtInfoMain">EXPERIENCE THE #1-RATED ESCAPE <br> ROOM IN KRYVYI RIH</h1>
     <h1 class="txtCommMain">"I’ve done two rooms (Diamond Heist and Da Vinci), and I had SO. MUCH. FUN."</h1>
     <h1 class="txtCommMain1">~ kata569 on TripAdvisor</h1>
-    <img src="<img src=" d:\progs\microsoft visual studio community projects\webapplication1\webapplication1\images\logo.png" />" alt="logoMain" class="logoMain">
+    <img src=";/images/logo.png" alt="logoMain" class="logoMain">
     <h1 class="txtCommMain2">#1 Trip Advisor Rated Escape Room in Kryvyi Rih</h1>
     <!-- Orange Info Rooms -->
     <div class="orangeBox">
         <p class="txtTitleOrange">ESCAPE ROOMS:</p>
-        <a href="taken.html" class="takenLink">TAKEN</a>
-        <a href="diamondHeist.html" class="diamondHeistLink">DIAMOND HEIST</a>
-        <a href="davinciWorkshop.html" class="davinciWorkLink">DAVINCI’S WORKSHOP</a>
-        <a href="secretSociety.html" class="secretSocLink">SECRET SOCIETY</a>
-        <a href="stadiumScare.html" class="stadScareLink">STADIUM SCARE</a>
-        <a href="cursedCastle.html" class="cursCatsleLink">CURSED CASTLE</a>
-        <a href="theShed.html" class="shedLink">THE SHED</a>
-        <a href="creepyLair.html" class="creepLairLink">CREEPY LAIR</a>
-        <a href="homeAlone.html" class="homeAloneLink">HOME ALONE</a>
-        <a href="merryGrinchmas.html" class="merryGrinchLink">MERRY GRINCHMAS</a>
-        <a href="elfEscape.html" class="elfEscLink">ELF ESCAPE</a>
+        <!-- Actual Quests Here -->
         <p class="txtFilterOrange">Filter By:</p>
         <div class="checkBox1Main">
             <input type="checkbox" id="Kr1">
@@ -396,9 +374,6 @@ body
             <input type="checkbox" id="Kr2">
             <label for="myCheckbox">Kryvyi Rih 2</label>
         </div>
-    </div>
-    <script>
-
-    </script>
+    </div>   
 </body>
 </html>
