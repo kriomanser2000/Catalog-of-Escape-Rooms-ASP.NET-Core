@@ -96,12 +96,9 @@ body
     position: absolute;
     right: 600px;
     top: 10px;
-    color: white;
+    color: gray;
     font-weight: bold;
-}
-.oth1:hover
-{
-    color: #FFC300;
+    cursor: default;
 }
 .oth2
 {
@@ -148,6 +145,8 @@ body
     width: 100%;
     border-collapse: collapse;
     background-color: #333;
+    position: absolute;
+    top: 200px;
 }
 .table11 th, .table11 td 
 {
@@ -171,6 +170,8 @@ body
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
+    position: absolute;
+    top: 120px;
 }
 .Btn22
 {
@@ -218,7 +219,7 @@ body
             <option value="gsPT">GROUPS & PARTIES</option>
             <option value="tmBG">TEAM BUILDING</option>
         </select>
-        <a asp-page="/ROOMS11/QuestList" class="oth1">QUEST ROOM LIST</a>
+        <a class="oth1" disabled>QUEST ROOM LIST</a>
         <a href="faq.html" class="oth2">FAQ & PARKING</a>
         <a href="gift.html" class="oth3">GIFT CARDS</a>
         <a href="contact.html" class="oth4">CONTACT US</a>
