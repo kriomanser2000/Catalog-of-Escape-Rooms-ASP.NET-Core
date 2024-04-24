@@ -20,6 +20,9 @@
 
   <ItemGroup>
     <None Include="Pages\main1.cshtml" />
+    <None Include="wwwroot\images\Catalog of Escape Rooms.png" />
+    <None Include="wwwroot\images\logo.png" />
+    <None Include="wwwroot\images\tickets.png" />
   </ItemGroup>
 
   <ItemGroup>
