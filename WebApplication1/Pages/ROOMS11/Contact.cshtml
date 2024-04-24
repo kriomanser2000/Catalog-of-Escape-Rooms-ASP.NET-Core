@@ -1,7 +1,6 @@
 ﻿@page
-@model IndexModel
+@model WebApplication1.Pages.ROOMS11.ContactModel
 @{
-    ViewData["Title"] = "Home page";
 }
 
 <!DOCTYPE html>
@@ -9,12 +8,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escape Room Kryvyi Rih | Catalog of Escape Rooms</title>
+    <title>Escape Room Kryvyi Rih | Catalog of Escape Rooms | Contact Us</title>
 </head>
 <style>
 body
 {
     background: black;
+    overflow-y: scroll;
 }
 .mainImg
 {
@@ -111,6 +111,7 @@ body
     top: 10px;
     color: white;
     font-weight: bold;
+    cursor: default;
 }
 .oth2:hover
 {
@@ -135,68 +136,9 @@ body
     position: absolute;
     right: 200px;
     top: 10px;
-    color: white;
+    color: gray;
     font-weight: bold;
-}
-.oth4:hover
-{
-    color: #FFC300;
-}
-.txtInfoMain
-{
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 68px;
-    color: white;
-    z-index: 0;
-}
-.txtCommMain
-{
-    position: absolute;
-    top: 53%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 24px;
-    color: #FFC300;
-    z-index: 0;
-}
-.txtCommMain1
-{
-    font-style: italic;
-    position: absolute;
-    top: 59%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 22px;
-    color: white;
-    z-index: 0;
-}
-.txtCommMain2
-{
-    font-family: monospace;
-    position: absolute;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 18px;
-    color: white;
-    z-index: 0;
-}
-.logoMain
-{
-    width: 70px;
-    position: absolute;
-    top: 68%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    filter: invert(100%);
+    cursor: default;
 }
 .orangeBox
 {
@@ -204,130 +146,148 @@ body
     width: 100%;
     height: 15%;
     position: absolute;
-    bottom: 30px;
+    top: 110px;
 }
-.txtTitleOrange
+.txtTitle1
 {
-    position: absolute;
-    left: 284px;
-    font-size: 18px;
+    font-size: 64px;
     font-weight: bold;
+    text-align: center;
+    justify-items: center;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
-.takenLink
+.txtTitle2
+{
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    justify-items: center;
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.whiteDivInfo
 {
     position: absolute;
-    top: 17px;
-    left: 450px;
-    color: black;
-    font-weight: 800;
-    font-size: 18px;
+    background: white;
+    width: 100%;
+    height: 300%;
+    bottom: -2069px;
+    font-family: sans-serif;
 }
-.diamondHeistLink
+.txtMain1
 {
     position: absolute;
-    top: 17px;
-    left: 530px;
-    color: black;
-    font-weight: 800;
-    font-size: 18px;
+    top: 35px;
+    left: 200px;
 }
-.davinciWorkLink
+.txtNoMain1
 {
     position: absolute;
-    top: 17px;
-    left: 700px;
-    color: black;
-    font-weight: 800;
-    font-size: 18px;
+    top: 100px;
+    left: 200px;
+    font-size: 22px;
 }
-.secretSocLink
+.wherePark
 {
     position: absolute;
-    top: 17px;
-    left: 930px;
-    color: black;
-    font-weight: 800;
-    font-size: 18px;
+    width: 80%;
+    height: 13%;
+    background: white;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    border: 1px solid gray;
 }
-.stadScareLink
+.whereParkMain1txt
+{
+    margin: 40px;
+    font-size: 28px;
+}
+.wherePark1txt
+{
+    margin: 40px;
+    font-size: 22px;
+}
+.wherePark2txt
+{
+    margin: 40px;
+}
+.wherePark3txt
+{
+    margin: 40px;
+}
+.wherePark1
 {
     position: absolute;
-    top: 17px;
-    left: 1100px;
-    color: black;
-    font-weight: 800;
-    font-size: 18px;
+    width: 80%;
+    height: 10%;
+    background: white;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    border: 1px solid gray;
 }
-.cursCatsleLink
+.whereParkMain2txt
+{
+    margin: 40px;
+    font-size: 28px;
+}
+.wherePark11txt
+{
+    margin: 40px;
+    font-size: 22px;
+}
+.wherePark22txt
+{
+    margin: 40px;
+}
+.txtMain2
 {
     position: absolute;
-    top: 17px;
-    left: 1270px;
-    color: black;
-    font-weight: 800;
-    font-size: 18px;
+    top: 830px;
+    left: 200px;
 }
-.shedLink
+.txtNoMain2
 {
     position: absolute;
-    top: 17px;
-    left: 1440px;
-    color: black;
-    font-weight: 800;
-    font-size: 18px;
+    top: 900px;
+    left: 200px;
+    font-size: 22px;
 }
-.creepLairLink
+.txtMain3
 {
     position: absolute;
-    top: 50px;
-    left: 450px;
-    color: black;
-    font-weight: 800;
-    font-size: 18px;
+    top: 980px;
+    left: 200px;
 }
-.homeAloneLink
+.txtNoMain3
 {
     position: absolute;
-    top: 50px;
-    left: 590px;
-    color: black;
-    font-weight: 800;
-    font-size: 18px;
+    top: 1050px;
+    left: 200px;
+    font-size: 22px;
 }
-.merryGrinchLink
+.txtMain4
 {
     position: absolute;
-    top: 50px;
-    left: 740px;
-    color: black;
-    font-weight: 800;
-    font-size: 18px;
+    top: 1190px;
+    left: 200px;
 }
-.elfEscLink
+.txtNoMain4
 {
     position: absolute;
-    top: 50px;
-    left: 950px;
-    color: black;
-    font-weight: 800;
-    font-size: 18px;
-}
-.txtFilterOrange
-{
-    position: absolute;
-    left: 350px;
-    bottom: 10px;
-    font-size: 18px;
-    font-weight: bold;
-}
-.checkBox1Main
-{
-    font-family: monospace;
-    position: absolute;
-    left: 445px;
-    bottom: 28px;
-    font-size: 18px;
-    font-weight: bold;
+    top: 1250px;
+    left: 200px;
+    font-size: 22px;
 }
 </style>
 <body>
@@ -354,26 +314,21 @@ body
         <a asp-page="/ROOMS11/QuestList" class="oth1">QUEST ROOM LIST</a>
         <a asp-page="/ROOMS11/FAQ" class="oth2">FAQ</a>
         <a asp-page="/ROOMS11/Cards" class="oth3">GIFT CARDS</a>
-        <a asp-page="/ROOMS11/Contact" class="oth4">CONTACT US</a>
+        <a class="oth4" disabled>CONTACT US</a>
     </div>
     <hr class="line1">
-    <!-- Text Main -->
-    <h1 class="txtInfoMain">EXPERIENCE THE #1-RATED ESCAPE <br> ROOM IN KRYVYI RIH</h1>
-    <h1 class="txtCommMain">"I’ve done two rooms (Diamond Heist and Da Vinci), and I had SO. MUCH. FUN."</h1>
-    <h1 class="txtCommMain1">~ kata569 on TripAdvisor</h1>
-    <img src="~/images/logo.png" alt="logoMain" class="logoMain">
-    <h1 class="txtCommMain2">#1 Trip Advisor Rated Escape Room in Kryvyi Rih</h1>
-    <!-- Orange Info Rooms -->
-    <div class="orangeBox">
-        <p class="txtTitleOrange">ESCAPE ROOMS:</p>
-        <!-- Actual Quests Here -->
-        <p class="txtFilterOrange">Filter By:</p>
-        <div class="checkBox1Main">
-            <input type="checkbox" id="Kr1">
-            <label for="myCheckbox">Kryvyi Rih 1</label>
-            <input type="checkbox" id="Kr2">
-            <label for="myCheckbox">Kryvyi Rih 2</label>
+    <!-- Orange Title -->
+    <div class="orangeBox"></div>
+    <p class="txtTitle1">Contact Us</p>
+    <p class="txtTitle2">Phone, address, email, and maps for all our St. Louis and St. Charles area location escape rooms.</p>
+    <!-- Main Info White -->
+    <div class="whiteDivInfo">
+        <div class="wherePark">
+            <h1 class="whereParkMain1txt">SASA NOMIR NE DAET</h1>
+            <p class="wherePark1txt">I DONT GIVE A NUMBER</p>
+            <p class="wherePark2txt">I DONT GIVE NUMBER AND LOCATION</p>
+            <p class="wherePark3txt">el negro</p>
         </div>
-    </div>   
+    </div>
 </body>
 </html>

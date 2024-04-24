@@ -11,7 +11,7 @@ namespace WebApplication1.Pages.ROOMS11
 
         public string About { get; set; }
 
-        [Range(1, int.MaxValue, ErrorMessage = "TimeLimit must be greater than 0")]
+        [Range(30, 60, ErrorMessage = "Min 30 Max 60")]
         public int TimeLimit { get; set; }
 
         [Range(1, int.MaxValue, ErrorMessage = "GroupSizeMin must be greater than 0")]
@@ -39,10 +39,10 @@ namespace WebApplication1.Pages.ROOMS11
         [Required(ErrorMessage = "Rate is required")]
         public string Rate { get; set; }
 
-        [Range(1, 10, ErrorMessage = "FearLvl must be between 1 and 10")]
+        [Range(1, 5, ErrorMessage = "FearLvl must be between 1 and 5")]
         public int FearLvl { get; set; }
 
-        [Range(1, 10, ErrorMessage = "Difficult must be between 1 and 10")]
+        [Range(1, 5, ErrorMessage = "Difficult must be between 1 and 5")]
         public int Difficult { get; set; }
 
         [DataType(DataType.Upload)]

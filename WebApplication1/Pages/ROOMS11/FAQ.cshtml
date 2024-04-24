@@ -1,0 +1,346 @@
+﻿@page
+@model WebApplication1.Pages.ROOMS11.FAQModel
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room Kryvyi Rih | Catalog of Escape Rooms | FAQ</title>
+</head>
+<style>
+body
+{
+    background: black;
+    overflow-y: scroll;
+}
+.mainImg
+{
+    position: absolute;
+    left: 100px;
+    top: 10px;
+    cursor: pointer;
+}
+.BookNowMain
+{
+    font-family: monospace;
+    position: absolute;
+    bottom: 815px;
+    right: 550px;
+    color: white;
+    border: 1px solid black;
+    font-size: 24px;
+    width: 160px;
+    font-weight: bold;
+    padding-right: 24px;
+    background: black;
+    border-radius: 4px; 
+    cursor: pointer;
+}
+.BookNowMain:focus 
+{
+    outline: none;
+}
+.EscapeRoomsMain
+{
+    font-family: monospace;
+    position: absolute;
+    bottom: 815px;
+    right: 335px;
+    color: white;
+    border: 1px solid black;
+    font-size: 24px;
+    width: 205px;
+    font-weight: bold;
+    padding-right: 24px;
+    background: black;
+    border-radius: 4px; 
+    cursor: pointer;
+}
+.EscapeRoomsMain:focus 
+{
+    outline: none;
+}
+.GroupsMain
+{
+    font-family: monospace;
+    position: absolute;
+    bottom: 815px;
+    right: 195px;
+    color: white;
+    border: 1px solid black;
+    font-size: 24px;
+    width: 130px;
+    font-weight: bold;
+    padding-right: 24px;
+    background: black;
+    border-radius: 4px; 
+    cursor: pointer;
+}
+.GroupsMain:focus 
+{
+    outline: none;
+}
+.line1
+{
+    position: absolute;
+    width: 99.9%;
+    top: 100px;
+    color: white;
+}
+.oth1
+{
+    text-decoration: none;
+    position: absolute;
+    right: 515px;
+    top: 10px;
+    color: white;
+    font-weight: bold;
+}
+.oth1:hover
+{
+    color: #FFC300;
+}
+.oth2
+{
+    text-decoration: none;
+    position: absolute;
+    right: 450px;
+    top: 10px;
+    color: gray;
+    font-weight: bold;
+    cursor: default;
+}
+.oth3
+{
+    text-decoration: none;
+    position: absolute;
+    right: 330px;
+    top: 10px;
+    color: white;
+    font-weight: bold;
+}
+.oth3:hover
+{
+    color: #FFC300;
+}
+.oth4
+{
+    text-decoration: none;
+    position: absolute;
+    right: 200px;
+    top: 10px;
+    color: white;
+    font-weight: bold;
+}
+.oth4:hover
+{
+    color: #FFC300;
+}
+.orangeBox
+{
+    background: #FFC300;
+    width: 100%;
+    height: 15%;
+    position: absolute;
+    top: 110px;
+}
+.txtTitle1
+{
+    font-size: 64px;
+    font-weight: bold;
+    text-align: center;
+    justify-items: center;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.txtTitle2
+{
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    justify-items: center;
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.whiteDivInfo
+{
+    position: absolute;
+    background: white;
+    width: 100%;
+    height: 300%;
+    bottom: -2069px;
+    font-family: sans-serif;
+}
+.txtMain1
+{
+    position: absolute;
+    top: 35px;
+    left: 200px;
+}
+.txtNoMain1
+{
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    font-size: 22px;
+}
+.wherePark
+{
+    position: absolute;
+    width: 80%;
+    height: 13%;
+    background: white;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    border: 1px solid gray;
+}
+.whereParkMain1txt
+{
+    margin: 40px;
+    font-size: 28px;
+}
+.wherePark1txt
+{
+    margin: 40px;
+    font-size: 22px;
+}
+.wherePark2txt
+{
+    margin: 40px;
+}
+.wherePark3txt
+{
+    margin: 40px;
+}
+.wherePark1
+{
+    position: absolute;
+    width: 80%;
+    height: 10%;
+    background: white;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    border: 1px solid gray;
+}
+.whereParkMain2txt
+{
+    margin: 40px;
+    font-size: 28px;
+}
+.wherePark11txt
+{
+    margin: 40px;
+    font-size: 22px;
+}
+.wherePark22txt
+{
+    margin: 40px;
+}
+.txtMain2
+{
+    position: absolute;
+    top: 830px;
+    left: 200px;
+}
+.txtNoMain2
+{
+    position: absolute;
+    top: 900px;
+    left: 200px;
+    font-size: 22px;
+}
+.txtMain3
+{
+    position: absolute;
+    top: 980px;
+    left: 200px;
+}
+.txtNoMain3
+{
+    position: absolute;
+    top: 1050px;
+    left: 200px;
+    font-size: 22px;
+}
+.txtMain4
+{
+    position: absolute;
+    top: 1190px;
+    left: 200px;
+}
+.txtNoMain4
+{
+    position: absolute;
+    top: 1250px;
+    left: 200px;
+    font-size: 22px;
+}
+</style>
+<body>
+    <!-- HEADER -->
+    <div class="header1">
+        <a asp-page="/Index">
+            <img class="mainImg" style="width: 200px;" src="~/images/catalog of escape rooms.png" alt="Catalog of Escape Rooms">
+        </a>
+        <select class="BookNowMain" id="myBookNowMain">
+            <option value="" disabled selected>BOOK NOW</option>
+            <option value="kr1">Kryvyi Rih 1</option>
+            <option value="kr2">Kryvyi Rih 2</option>
+            <option value="prvt">PRIVATE ESCAPE ROOMS</option>
+        </select>
+        <select class="EscapeRoomsMain" id="myEscapeRoomsMain">
+            <option value="" disabled selected>ESCAPE ROOMS</option>
+            <!-- Rooms Here -->
+        </select>
+        <select class="GroupsMain" id="myGroupsMain">
+            <option value="" disabled selected>GROUPS</option>
+            <option value="gsPT">GROUPS & PARTIES</option>
+            <option value="tmBG">TEAM BUILDING</option>
+        </select>
+        <a asp-page="/ROOMS11/QuestList" class="oth1">QUEST ROOM LIST</a>
+        <a class="oth2" disabled>FAQ</a>
+        <a asp-page="/ROOMS11/Cards" class="oth3">GIFT CARDS</a>
+        <a asp-page="/ROOMS11/Contact" class="oth4">CONTACT US</a>
+    </div>
+    <hr class="line1">
+    <!-- Orange Title -->
+    <div class="orangeBox"></div>
+    <p class="txtTitle1">Parking Info & FAQs</p>
+    <p class="txtTitle2">See the answers to our most common St. Louis and St. Charles area escape room questions below!</p>
+    <!-- Main Info White -->
+    <div class="whiteDivInfo">
+        <h1 class="txtMain1">Where Can I Park?</h1>
+        <p class="txtNoMain1">Please arrive 15 minutes prior to game and allow at least 5-10 minutes for parking at our St. Louis location.</p>
+        <div class="wherePark">
+            <h1 class="whereParkMain1txt">St. Louis Location Parking</h1>
+            <p class="wherePark1txt">440 N 4th St #290, St. Louis, MO 63102</p>
+            <p class="wherePark2txt">We’re located as part of the Mansion House parking garage (accepts cash, credit, or debit upon exiting). Customers can access the garage from N. 4th St. at 3 entrances, but the closest to us is The Gentry’s Landing entrance (400 N. 4th St., see image). Turn right into the garage BEFORE you pass this building.</p>
+            <p class="wherePark3txt">Walk back out of the garage to N 4th St. and look for the ESCAPE ROOM sign (see image), then proceed North by sidewalk to our building’s front doors (440 N. 4th) where we can buzz you in. Street parking (typically free after 7pm), other garages, and uncovered parking lots all within a couple blocks, are also options. If commuting by Metro Link, the Convention Center stop is located on Washington Ave just 2 blocks west of our location.</p>
+        </div>
+        <div class="wherePark1">
+            <h1 class="whereParkMain2txt">St. Charles Location Parking</h1>
+            <p class="wherePark11txt">3900 Old Hwy 94 S #1, St. Charles, MO 63304</p>
+            <p class="wherePark22txt">We are located in Gateway Office park and have plenty of parking spots in our huge lot. So, no worries about parking.</p>
+        </div>
+        <h1 class="txtMain2">Do you offer gift cards?</h1>
+        <p class="txtNoMain2">Yes! You can buy gift vouchers <a href="">here</a>.</p>
+        <h1 class="txtMain3">Is there an age limit?</h1>
+        <p class="txtNoMain3">Not really, but anyone 6 and up needs to pay for a spot. Just know that in our experience, besides the Elf room, most kids under 8 don't get much out of the <br> room besides spending time with their family and friends. :) So it is up to your discretion whether you want to bring them to the room or not. Children up to <br> 16 will require at least one adult chaperone (at least 18 years of age) with them in the room.</p>
+        <h1 class="txtMain4">What is an escape game?</h1>
+        <p class="txtNoMain4">It’s a real-life game experience where people participate in various activities, find clues, and solve puzzles to work as a team to ESCAPE out of a room in 60 <br> minutes or less.</p>
+    </div>
+</body>
+</html>

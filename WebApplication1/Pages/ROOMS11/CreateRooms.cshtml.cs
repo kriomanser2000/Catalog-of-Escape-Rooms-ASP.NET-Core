@@ -63,6 +63,19 @@ namespace WebApplication1.Pages.ROOMS11
                 ModelState.AddModelError(string.Empty, $"An unexpected error occurred: {ex.Message}");
                 return Page();
             }
+            if (Request.Form.Files.Count > 0)
+            {
+                IFormFile file = Request.Form.Files.FirstOrDefault();
+                using (var dataStream = new MemoryStream())
+                {
+                    file.CopyTo(dataStream);
+                    Room.GalleryImg = dataStream.ToArray();
+                }
+            }
+            else
+            {
+                Room.GalleryImg = null;
+            }
             return RedirectToPage("/ROOMS11/QuestList");
         }
     }
