@@ -255,7 +255,31 @@ footer p
         <a asp-page="/ROOMS11/Contact" class="oth4">CONTACT US</a>
     </div>
     <hr class="line1">
-    <!-- ListRooms -->   
+    <!-- ListRooms -->
+    <div class="RoomsLists">
+        @foreach (var room in Model.Rooms)
+        {
+            <div class="card">
+                <img src="data:image/jpeg;base64,@(Convert.ToBase64String(room.GalleryImg))" alt="@room.Name" style="width:100%">
+                <div class="RoomsLists1">
+                    <h4><b>@room.Name</b></h4>
+                    <p>@room.About</p>
+                    <p>Time Limit: @room.TimeLimit minutes</p>
+                    <p>Group Size: @room.GroupSizeMin - @room.GroupSizeMax people</p>
+                    <p>Minimum Age: @room.MinAge</p>
+                    <p>Address: @room.Address</p>
+                    <p>Phone: @room.PhoneNum</p>
+                    <p>Email: @room.Email</p>
+                    <p>Company: @room.CompanyName</p>
+                    <p>Rate: @room.Rate</p>
+                    <p>Fear Level: @room.FearLvl</p>
+                    <p>Difficulty: @room.Difficult</p>
+                    <a asp-page="./EditRoom" asp-route-id="@room.Id" class="btn btn-primary">Edit</a>
+                    <a asp-page="./DeleteRoom" asp-route-id="@room.Id" class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        }
+    </div>
     <!-- FOOTER -->
     <footer>
         <p>

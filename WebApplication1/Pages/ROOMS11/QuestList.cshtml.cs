@@ -1,19 +1,24 @@
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Data;
-using System.Data.SqlClient;
-using static System.Net.Mime.MediaTypeNames;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-using System.Net;
-using System.Xml.Linq;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using WebApplication1.Data;
+using WebApplication1.Pages.ROOMS11;
 
 namespace WebApplication1.Pages.ROOMS11
 {
     public class QuestListModel : PageModel
     {
-        public void OnGet()
+        private readonly RoomContext _context;
+
+        public QuestListModel(RoomContext context)
         {
-            
+            _context = context;
+        }
+        public IList<RoomInfo> Rooms { get; set; }
+
+        public async Task OnGetAsync()
+        {
+            Rooms = await _context.Rooms.ToListAsync();
         }
     }
 }
