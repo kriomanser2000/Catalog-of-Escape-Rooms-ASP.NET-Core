@@ -255,58 +255,7 @@ footer p
         <a asp-page="/ROOMS11/Contact" class="oth4">CONTACT US</a>
     </div>
     <hr class="line1">
-    <!-- TableListRooms -->
-    <div>
-        <a asp-page="/ROOMS11/CreateRooms" class="btn btn-primary btn-sm Btn11">New Room</a>
-        <table class="table11">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>About</th>
-                    <th>TimeLimit</th>
-                    <th>GroupSizeMin</th>
-                    <th>GroupSizeMax</th>
-                    <th>MinAge</th>
-                    <th>Address</th>
-                    <th>PhoneNum</th>
-                    <th>Email</th>
-                    <th>CompanyName</th>
-                    <th>Rate</th>
-                    <th>FearLvl</th>
-                    <th>Difficult</th>
-                    <th>GalleryImage</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var rooms in Model.listRooms)
-                {
-                    <tr>
-                        <td>@rooms.Id</td>
-                        <td>@rooms.Name</td>
-                        <td>@rooms.About</td>
-                        <td>@rooms.TimeLimit</td>
-                        <td>@rooms.GroupSizeMin</td>
-                        <td>@rooms.GroupSizeMax</td>
-                        <td>@rooms.MinAge</td>
-                        <td>@rooms.Address</td>
-                        <td>@rooms.PhoneNum</td>
-                        <td>@rooms.Email</td>
-                        <td>@rooms.CompanyName</td>
-                        <td>@rooms.Rate</td>
-                        <td>@rooms.FearLvl</td>
-                        <td>@rooms.Difficult</td>
-                        <td>@rooms.GalleryImg</td>
-                        <td>
-                            <a class="btn btn-primary btn-sm Btn22" href="/Rooms/Edit?Id=@rooms.Id">Edit</a>
-                            <a class="btn btn-danger btn-sm Btn33" href="/Rooms/Delete?Id=@rooms.Id">Delete</a>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
+    <!-- ListRooms -->   
     <!-- FOOTER -->
     <footer>
         <p>
