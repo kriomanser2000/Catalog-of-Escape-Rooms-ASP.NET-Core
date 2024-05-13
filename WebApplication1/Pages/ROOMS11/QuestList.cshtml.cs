@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using WebApplication1.Data;
@@ -18,7 +18,8 @@ namespace WebApplication1.Pages.ROOMS11
 
         public async Task OnGetAsync()
         {
-            Rooms = await _context.Rooms.ToListAsync();
+            var rooms = await _context.Rooms.ToListAsync();
+            Rooms = RoomInfo.GetRooms(rooms);
         }
     }
 }
