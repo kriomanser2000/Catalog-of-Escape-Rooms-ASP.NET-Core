@@ -6,7 +6,6 @@ using WebApplication1.Data;
 
 namespace WebApplication1.Pages.ROOMS11
 {
-    public class CreateRoomModel : PageModel
     {
         private readonly RoomContext _context;
         public CreateRoomModel(RoomContext context)
