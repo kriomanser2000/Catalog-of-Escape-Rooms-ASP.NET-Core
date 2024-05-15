@@ -3,12 +3,12 @@ using WebApplication1.Models;
 
 namespace WebApplication1.DAL
 {
-    public class AppDBContext : DbContext
+    public class AppDbContext : DbContext
     {
-        public AppDBContext(DbContextOptions options) : base(options) 
+        public AppDbContext(DbContextOptions options) : base(options) 
         {
             
         }
-        public virtual DbSet<SuperRooms> SuperRooms { get; set; }
+        public virtual DbSet<SuperRoom> SuperRooms { get; set; }
     }
 }

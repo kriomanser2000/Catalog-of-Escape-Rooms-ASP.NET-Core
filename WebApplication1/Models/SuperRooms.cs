@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WebApplication1.Models
 {
-    public class SuperRooms
+    public class SuperRoom
     {
         [Key]
         public int Id { get; set; }

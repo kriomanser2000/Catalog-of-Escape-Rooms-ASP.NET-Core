@@ -236,24 +236,7 @@
         <a asp-page="/ROOMS11/Contact" class="oth4">CONTACT US</a>
     </div>
     <hr class="line1">
-    <!-- Edit -->
-    <form method="post">
-        <input type="hidden" asp-for="Room.Id" />
-        <div class="form-group">
-            <label asp-for="Room.Name">Name</label>
-            <input asp-for="Room.Name" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label asp-for="Room.About">About</label>
-            <textarea asp-for="Room.About" class="form-control"></textarea>
-        </div>
-        <div class="form-group">
-            <label asp-for="Room.TimeLimit">Time Limit (minutes)</label>
-            <input asp-for="Room.TimeLimit" class="form-control" />
-        </div>
-        <!-- Додайте інші поля форми для властивостей RoomInfo -->
-        <button type="submit" class="btn btn-primary">Save</button>
-    </form>
+    <!-- Edit -->  
     <!-- FOOTER -->
     <footer>
         <p>

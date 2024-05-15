@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.DAL;
-using WebApplication1.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,11 +8,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 //DI wht
-builder.Services.AddDbContext<AppDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddDbContext<RoomContext>(options =>
-    options.UseSqlServer
-    (builder.Configuration.GetConnectionString("Data Source=DESKTOP-MQCJ73U\\SQLEXPRESS;Initial Catalog=CatalogOfRooms;Integrated Security=True;Encrypt=True;Trust Server Certificate=True")));
+//builder.Services.AddDbContext<RoomContext>(options =>
+    //options.UseSqlServer
+    //(builder.Configuration.GetConnectionString("Data Source=DESKTOP-MQCJ73U\\SQLEXPRESS;Initial Catalog=CatalogOfRooms;Integrated Security=True;Encrypt=True;Trust Server Certificate=True")));
 
 var app = builder.Build();
 
