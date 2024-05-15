@@ -1,0 +1,114 @@
+﻿@page
+@model WebApplication1.Pages.RoomMaster.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SuperRoom[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SuperRoom[0].About)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SuperRoom[0].TimeLimit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SuperRoom[0].GroupSizeMin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SuperRoom[0].GroupSizeMax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SuperRoom[0].MinAge)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SuperRoom[0].Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SuperRoom[0].PhoneNum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SuperRoom[0].Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SuperRoom[0].CompanyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SuperRoom[0].Rate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SuperRoom[0].FearLvl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SuperRoom[0].Difficult)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SuperRoom[0].GalleryImg)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.SuperRoom) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.About)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeLimit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GroupSizeMin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GroupSizeMax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinAge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FearLvl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Difficult)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GalleryImg)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

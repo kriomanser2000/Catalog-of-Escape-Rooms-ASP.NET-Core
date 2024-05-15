@@ -1,0 +1,99 @@
+﻿@page
+@model WebApplication1.Pages.RoomMaster.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>SuperRoom</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SuperRoom.Name" class="control-label"></label>
+                <input asp-for="SuperRoom.Name" class="form-control" />
+                <span asp-validation-for="SuperRoom.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SuperRoom.About" class="control-label"></label>
+                <input asp-for="SuperRoom.About" class="form-control" />
+                <span asp-validation-for="SuperRoom.About" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SuperRoom.TimeLimit" class="control-label"></label>
+                <input asp-for="SuperRoom.TimeLimit" class="form-control" />
+                <span asp-validation-for="SuperRoom.TimeLimit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SuperRoom.GroupSizeMin" class="control-label"></label>
+                <input asp-for="SuperRoom.GroupSizeMin" class="form-control" />
+                <span asp-validation-for="SuperRoom.GroupSizeMin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SuperRoom.GroupSizeMax" class="control-label"></label>
+                <input asp-for="SuperRoom.GroupSizeMax" class="form-control" />
+                <span asp-validation-for="SuperRoom.GroupSizeMax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SuperRoom.MinAge" class="control-label"></label>
+                <input asp-for="SuperRoom.MinAge" class="form-control" />
+                <span asp-validation-for="SuperRoom.MinAge" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SuperRoom.Address" class="control-label"></label>
+                <input asp-for="SuperRoom.Address" class="form-control" />
+                <span asp-validation-for="SuperRoom.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SuperRoom.PhoneNum" class="control-label"></label>
+                <input asp-for="SuperRoom.PhoneNum" class="form-control" />
+                <span asp-validation-for="SuperRoom.PhoneNum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SuperRoom.Email" class="control-label"></label>
+                <input asp-for="SuperRoom.Email" class="form-control" />
+                <span asp-validation-for="SuperRoom.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SuperRoom.CompanyName" class="control-label"></label>
+                <input asp-for="SuperRoom.CompanyName" class="form-control" />
+                <span asp-validation-for="SuperRoom.CompanyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SuperRoom.Rate" class="control-label"></label>
+                <input asp-for="SuperRoom.Rate" class="form-control" />
+                <span asp-validation-for="SuperRoom.Rate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SuperRoom.FearLvl" class="control-label"></label>
+                <input asp-for="SuperRoom.FearLvl" class="form-control" />
+                <span asp-validation-for="SuperRoom.FearLvl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SuperRoom.Difficult" class="control-label"></label>
+                <input asp-for="SuperRoom.Difficult" class="form-control" />
+                <span asp-validation-for="SuperRoom.Difficult" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SuperRoom.GalleryImg" class="control-label"></label>
+                <input asp-for="SuperRoom.GalleryImg" class="form-control" />
+                <span asp-validation-for="SuperRoom.GalleryImg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

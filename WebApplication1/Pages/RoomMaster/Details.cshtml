@@ -1,0 +1,103 @@
+﻿@page
+@model WebApplication1.Pages.RoomMaster.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>SuperRoom</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SuperRoom.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SuperRoom.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SuperRoom.About)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SuperRoom.About)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SuperRoom.TimeLimit)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SuperRoom.TimeLimit)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SuperRoom.GroupSizeMin)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SuperRoom.GroupSizeMin)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SuperRoom.GroupSizeMax)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SuperRoom.GroupSizeMax)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SuperRoom.MinAge)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SuperRoom.MinAge)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SuperRoom.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SuperRoom.Address)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SuperRoom.PhoneNum)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SuperRoom.PhoneNum)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SuperRoom.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SuperRoom.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SuperRoom.CompanyName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SuperRoom.CompanyName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SuperRoom.Rate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SuperRoom.Rate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SuperRoom.FearLvl)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SuperRoom.FearLvl)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SuperRoom.Difficult)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SuperRoom.Difficult)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SuperRoom.GalleryImg)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SuperRoom.GalleryImg)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.SuperRoom.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
