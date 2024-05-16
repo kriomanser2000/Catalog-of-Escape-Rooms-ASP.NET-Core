@@ -5,95 +5,534 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
-
-<h4>SuperRoom</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="SuperRoom.Name" class="control-label"></label>
-                <input asp-for="SuperRoom.Name" class="form-control" />
-                <span asp-validation-for="SuperRoom.Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SuperRoom.About" class="control-label"></label>
-                <input asp-for="SuperRoom.About" class="form-control" />
-                <span asp-validation-for="SuperRoom.About" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SuperRoom.TimeLimit" class="control-label"></label>
-                <input asp-for="SuperRoom.TimeLimit" class="form-control" />
-                <span asp-validation-for="SuperRoom.TimeLimit" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SuperRoom.GroupSizeMin" class="control-label"></label>
-                <input asp-for="SuperRoom.GroupSizeMin" class="form-control" />
-                <span asp-validation-for="SuperRoom.GroupSizeMin" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SuperRoom.GroupSizeMax" class="control-label"></label>
-                <input asp-for="SuperRoom.GroupSizeMax" class="form-control" />
-                <span asp-validation-for="SuperRoom.GroupSizeMax" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SuperRoom.MinAge" class="control-label"></label>
-                <input asp-for="SuperRoom.MinAge" class="form-control" />
-                <span asp-validation-for="SuperRoom.MinAge" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SuperRoom.Address" class="control-label"></label>
-                <input asp-for="SuperRoom.Address" class="form-control" />
-                <span asp-validation-for="SuperRoom.Address" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SuperRoom.PhoneNum" class="control-label"></label>
-                <input asp-for="SuperRoom.PhoneNum" class="form-control" />
-                <span asp-validation-for="SuperRoom.PhoneNum" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SuperRoom.Email" class="control-label"></label>
-                <input asp-for="SuperRoom.Email" class="form-control" />
-                <span asp-validation-for="SuperRoom.Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SuperRoom.CompanyName" class="control-label"></label>
-                <input asp-for="SuperRoom.CompanyName" class="form-control" />
-                <span asp-validation-for="SuperRoom.CompanyName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SuperRoom.Rate" class="control-label"></label>
-                <input asp-for="SuperRoom.Rate" class="form-control" />
-                <span asp-validation-for="SuperRoom.Rate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SuperRoom.FearLvl" class="control-label"></label>
-                <input asp-for="SuperRoom.FearLvl" class="form-control" />
-                <span asp-validation-for="SuperRoom.FearLvl" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SuperRoom.Difficult" class="control-label"></label>
-                <input asp-for="SuperRoom.Difficult" class="form-control" />
-                <span asp-validation-for="SuperRoom.Difficult" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SuperRoom.GalleryImg" class="control-label"></label>
-                <input asp-for="SuperRoom.GalleryImg" class="form-control" />
-                <span asp-validation-for="SuperRoom.GalleryImg" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
-
-<div>
-    <a asp-page="Index">Back to List</a>
-</div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN | Creating Room | Catalog of Escape Rooms</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebApplication1.styles.css" asp-append-version="true" />
+</head>
+<style>
+body
+{
+    background: black;
+    overflow-y: scroll;
 }
+.mainImg
+{
+    position: absolute;
+    left: 100px;
+    top: 10px;
+    cursor: pointer;
+}
+.BookNowMain
+{
+    font-family: monospace;
+    position: absolute;
+    bottom: 1220px;
+    right: 550px;
+    color: white;
+    border: 1px solid black;
+    font-size: 24px;
+    width: 160px;
+    font-weight: bold;
+    padding-right: 24px;
+    background: black;
+    border-radius: 4px; 
+    cursor: pointer;
+}
+.BookNowMain:focus 
+{
+    outline: none;
+}
+.EscapeRoomsMain
+{
+    font-family: monospace;
+    position: absolute;
+    bottom: 1220px;
+    right: 335px;
+    color: white;
+    border: 1px solid black;
+    font-size: 24px;
+    width: 205px;
+    font-weight: bold;
+    padding-right: 24px;
+    background: black;
+    border-radius: 4px; 
+    cursor: pointer;
+}
+.EscapeRoomsMain:focus 
+{
+    outline: none;
+}
+.GroupsMain
+{
+    font-family: monospace;
+    position: absolute;
+    bottom: 1220px;
+    right: 195px;
+    color: white;
+    border: 1px solid black;
+    font-size: 24px;
+    width: 130px;
+    font-weight: bold;
+    padding-right: 24px;
+    background: black;
+    border-radius: 4px; 
+    cursor: pointer;
+}
+.GroupsMain:focus 
+{
+    outline: none;
+}
+.line1
+{
+    position: absolute;
+    width: 99.9%;
+    top: 100px;
+    color: white;
+    right: 1px;
+}
+.oth1
+{
+    text-decoration: none;
+    position: absolute;
+    right: 515px;
+    top: 10px;
+    color: white;
+    font-weight: bold;
+}
+.oth1:hover
+{
+    color: #FFC300;
+}
+.oth2
+{
+    text-decoration: none;
+    position: absolute;
+    right: 450px;
+    top: 10px;
+    color: white;
+    font-weight: bold;
+}
+.oth2:hover
+{
+    color: #FFC300;
+}
+.oth3
+{
+    text-decoration: none;
+    position: absolute;
+    right: 330px;
+    top: 10px;
+    color: white;
+    font-weight: bold;
+}
+.oth3:hover
+{
+    color: #FFC300;
+}
+.oth4
+{
+    text-decoration: none;
+    position: absolute;
+    right: 200px;
+    top: 10px;
+    color: white;
+    font-weight: bold;
+}
+.oth4:hover
+{
+    color: #FFC300;
+}
+.txtInfoMain
+{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 68px;
+    color: white;
+    z-index: 0;
+}
+.txtCommMain
+{
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 24px;
+    color: #FFC300;
+    z-index: 0;
+}
+.txtCommMain1
+{
+    font-style: italic;
+    position: absolute;
+    top: 59%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 22px;
+    color: white;
+    z-index: 0;
+}
+.txtCommMain2
+{
+    font-family: monospace;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    z-index: 0;
+}
+.logoMain
+{
+    width: 70px;
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    filter: invert(100%);
+}
+.orangeBox
+{
+    background: #FFC300;
+    width: 100%;
+    height: 15%;
+    position: absolute;
+    bottom: 30px;
+}
+.txtTitleOrange
+{
+    position: absolute;
+    left: 284px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.takenLink
+{
+    position: absolute;
+    top: 17px;
+    left: 450px;
+    color: black;
+    font-weight: 800;
+    font-size: 18px;
+}
+.diamondHeistLink
+{
+    position: absolute;
+    top: 17px;
+    left: 530px;
+    color: black;
+    font-weight: 800;
+    font-size: 18px;
+}
+.davinciWorkLink
+{
+    position: absolute;
+    top: 17px;
+    left: 700px;
+    color: black;
+    font-weight: 800;
+    font-size: 18px;
+}
+.secretSocLink
+{
+    position: absolute;
+    top: 17px;
+    left: 930px;
+    color: black;
+    font-weight: 800;
+    font-size: 18px;
+}
+.stadScareLink
+{
+    position: absolute;
+    top: 17px;
+    left: 1100px;
+    color: black;
+    font-weight: 800;
+    font-size: 18px;
+}
+.cursCatsleLink
+{
+    position: absolute;
+    top: 17px;
+    left: 1270px;
+    color: black;
+    font-weight: 800;
+    font-size: 18px;
+}
+.shedLink
+{
+    position: absolute;
+    top: 17px;
+    left: 1440px;
+    color: black;
+    font-weight: 800;
+    font-size: 18px;
+}
+.creepLairLink
+{
+    position: absolute;
+    top: 50px;
+    left: 450px;
+    color: black;
+    font-weight: 800;
+    font-size: 18px;
+}
+.homeAloneLink
+{
+    position: absolute;
+    top: 50px;
+    left: 590px;
+    color: black;
+    font-weight: 800;
+    font-size: 18px;
+}
+.merryGrinchLink
+{
+    position: absolute;
+    top: 50px;
+    left: 740px;
+    color: black;
+    font-weight: 800;
+    font-size: 18px;
+}
+.elfEscLink
+{
+    position: absolute;
+    top: 50px;
+    left: 950px;
+    color: black;
+    font-weight: 800;
+    font-size: 18px;
+}
+.txtFilterOrange
+{
+    position: absolute;
+    left: 350px;
+    bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.checkBox1Main
+{
+    font-family: monospace;
+    position: absolute;
+    left: 445px;
+    bottom: 28px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.RoomQuestList
+{
+    color: white;
+    margin-top: 200px;
+    right: 100px;
+}
+footer
+{
+    background: #505050;
+    color: white;
+    font-family: monospace;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -415px;
+    width: 100%;
+    right: 0.1px;
+    height: 15%;
+    display: flex;     
+    flex-direction: row;   
+    justify-content: space-around;         
+    align-items: center;
+}
+footer a 
+{
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+footer p 
+{
+    display: inline-block;    
+    margin: 0;
+}
+</style>
+<body>
+    <!-- HEADER -->
+    <div class="header1">
+        <a asp-page="/Index">
+            <img class="mainImg" style="width: 200px;" src="~/images/catalog of escape rooms.png" alt="Catalog of Escape Rooms">
+        </a>
+        <select class="BookNowMain" id="myBookNowMain">
+            <option value="" disabled selected>BOOK NOW</option>
+            <option value="kr1">Kryvyi Rih 1</option>
+            <option value="kr2">Kryvyi Rih 2</option>
+            <option value="prvt">PRIVATE ESCAPE ROOMS</option>
+        </select>
+        <select class="EscapeRoomsMain" id="myEscapeRoomsMain">
+            <option value="" disabled selected>ESCAPE ROOMS</option>
+            <!-- Rooms Here -->
+        </select>
+        <select class="GroupsMain" id="myGroupsMain">
+            <option value="" disabled selected>GROUPS</option>
+            <option value="gsPT">GROUPS & PARTIES</option>
+            <option value="tmBG">TEAM BUILDING</option>
+        </select>
+        <a asp-page="/RoomMaster/Index" class="oth1">QUEST ROOM LIST</a>
+        <a asp-page="/ROOMS11/FAQ" class="oth2">FAQ</a>
+        <a asp-page="/ROOMS11/Cards" class="oth3">GIFT CARDS</a>
+        <a asp-page="/ROOMS11/Contact" class="oth4">CONTACT US</a>
+    </div>
+    <hr class="line1">
+    <!-- HEADER -->
+    <div class="header1">
+        <a asp-page="/Index">
+            <img class="mainImg" style="width: 200px;" src="~/images/catalog of escape rooms.png" alt="Catalog of Escape Rooms">
+        </a>
+        <select class="BookNowMain" id="myBookNowMain">
+            <option value="" disabled selected>BOOK NOW</option>
+            <option value="kr1">Kryvyi Rih 1</option>
+            <option value="kr2">Kryvyi Rih 2</option>
+            <option value="prvt">PRIVATE ESCAPE ROOMS</option>
+        </select>
+        <select class="EscapeRoomsMain" id="myEscapeRoomsMain">
+            <option value="" disabled selected>ESCAPE ROOMS</option>
+            <!-- Rooms Here -->
+        </select>
+        <select class="GroupsMain" id="myGroupsMain">
+            <option value="" disabled selected>GROUPS</option>
+            <option value="gsPT">GROUPS & PARTIES</option>
+            <option value="tmBG">TEAM BUILDING</option>
+        </select>
+        <a asp-page="/RoomMaster/Index" class="oth1">QUEST ROOM LIST</a>
+        <a asp-page="/ROOMS11/FAQ" class="oth2">FAQ</a>
+        <a asp-page="/ROOMS11/Cards" class="oth3">GIFT CARDS</a>
+        <a asp-page="/ROOMS11/Contact" class="oth4">CONTACT US</a>
+    </div>
+    <hr class="line1">
+    <!-- Main Room List -->
+    <div class="RoomQuestList">
+        <h1>Create</h1>
+        <h4>Quest Room for List</h4>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="SuperRoom.Name" class="control-label"></label>
+                        <input asp-for="SuperRoom.Name" class="form-control" />
+                        <span asp-validation-for="SuperRoom.Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SuperRoom.About" class="control-label"></label>
+                        <input asp-for="SuperRoom.About" class="form-control" />
+                        <span asp-validation-for="SuperRoom.About" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SuperRoom.TimeLimit" class="control-label"></label>
+                        <input asp-for="SuperRoom.TimeLimit" class="form-control" />
+                        <span asp-validation-for="SuperRoom.TimeLimit" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SuperRoom.GroupSizeMin" class="control-label"></label>
+                        <input asp-for="SuperRoom.GroupSizeMin" class="form-control" />
+                        <span asp-validation-for="SuperRoom.GroupSizeMin" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SuperRoom.GroupSizeMax" class="control-label"></label>
+                        <input asp-for="SuperRoom.GroupSizeMax" class="form-control" />
+                        <span asp-validation-for="SuperRoom.GroupSizeMax" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SuperRoom.MinAge" class="control-label"></label>
+                        <input asp-for="SuperRoom.MinAge" class="form-control" />
+                        <span asp-validation-for="SuperRoom.MinAge" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SuperRoom.Address" class="control-label"></label>
+                        <input asp-for="SuperRoom.Address" class="form-control" />
+                        <span asp-validation-for="SuperRoom.Address" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SuperRoom.PhoneNum" class="control-label"></label>
+                        <input asp-for="SuperRoom.PhoneNum" class="form-control" />
+                        <span asp-validation-for="SuperRoom.PhoneNum" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SuperRoom.Email" class="control-label"></label>
+                        <input asp-for="SuperRoom.Email" class="form-control" />
+                        <span asp-validation-for="SuperRoom.Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SuperRoom.CompanyName" class="control-label"></label>
+                        <input asp-for="SuperRoom.CompanyName" class="form-control" />
+                        <span asp-validation-for="SuperRoom.CompanyName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SuperRoom.Rate" class="control-label"></label>
+                        <input asp-for="SuperRoom.Rate" class="form-control" />
+                        <span asp-validation-for="SuperRoom.Rate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SuperRoom.FearLvl" class="control-label"></label>
+                        <input asp-for="SuperRoom.FearLvl" class="form-control" />
+                        <span asp-validation-for="SuperRoom.FearLvl" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SuperRoom.Difficult" class="control-label"></label>
+                        <input asp-for="SuperRoom.Difficult" class="form-control" />
+                        <span asp-validation-for="SuperRoom.Difficult" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SuperRoom.GalleryImg" class="control-label"></label>
+                        <input asp-for="SuperRoom.GalleryImg" class="form-control" />
+                        <span asp-validation-for="SuperRoom.GalleryImg" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary"
+                        &nbsp;&nbsp;<a asp-page="./Index" class="btn btn-success">Back to List</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        @section Scripts 
+        {
+            @{
+                await Html.RenderPartialAsync("_ValidationScriptsPartial");
+            }
+        }
+    </div>
+    <!-- FOOTER -->
+    <footer>
+        <p>Escape Room Kryvyi Rih 1 <br>
+            440 N 4th St #290 <br>
+            St. Kr1, MO 63102 <br>
+            Get Directions | Book Now <br>  
+            314-690-3356
+        </p>
+        <p>Escape Room Kryvyi Rih 2 <br>
+            219 N 8th St #310 <br>
+            St. Kr2, MO 32562 <br>
+            Get Directions | Book Now <br>  
+            346-745-7269
+        </p>
+    </footer>
+</body>
+</html>

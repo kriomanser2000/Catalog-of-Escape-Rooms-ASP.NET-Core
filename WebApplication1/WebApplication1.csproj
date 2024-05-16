@@ -7,19 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Pages\main1.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Pages\main1.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="Pages\main1.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Pages\main1.cshtml" />
     <None Include="wwwroot\images\Catalog of Escape Rooms.png" />
     <None Include="wwwroot\images\logo.png" />
     <None Include="wwwroot\images\tickets.png" />
